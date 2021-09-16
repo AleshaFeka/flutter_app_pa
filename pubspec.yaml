@@ -23,7 +23,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_bloc: 7.2.0
   url_strategy: ^0.2.0
 
   # The following adds the Cupertino Icons font to your application.
@@ -75,12 +74,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  assets:
-    - assets/
-  fonts:
-    - family: HelveticaNeue
-      fonts:
-        - asset: assets/fonts/HelveticaNeue-Bold.ttf
-          weight: 500
-        - asset: assets/fonts/HelveticaNeue-Regular.ttf
-          weight: 400
