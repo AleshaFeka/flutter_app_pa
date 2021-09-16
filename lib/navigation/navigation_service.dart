@@ -6,9 +6,8 @@ import 'package:flutter_app_pa/pages/not_authenticated_page.dart';
 export 'package:flutter_app_pa/navigation/navigation_event.dart';
 
 class NavigationService {
-
-///   This static stuff below is only for demo-app purposes.
-///   In real app we should use some DI system instead.
+  ///   This static stuff below is only for demo-app purposes.
+  ///   In real app we should use some DI system instead.
   static NavigationService? _instance;
 
   static NavigationService get instance {
@@ -19,13 +18,13 @@ class NavigationService {
   static initSingleton(GlobalKey<NavigatorState> navigatorKey, MyAuthService myAuthService) {
     _instance = NavigationService(navigatorKey: navigatorKey, myAuthService: myAuthService);
   }
-///   All static above should be removed in real app.
 
+  ///   All static above should be removed in real app.
 
   final GlobalKey<NavigatorState> navigatorKey;
   final MyAuthService myAuthService;
 
-  NavigationService({required this.myAuthService, required this.navigatorKey}){
+  NavigationService({required this.myAuthService, required this.navigatorKey}) {
     myAuthService.addListener(_authListener);
   }
 
@@ -44,7 +43,7 @@ class NavigationService {
   void proceedEvent(NavigationEvent event, {bool ignoreAuth = false}) {
     assert(navigatorKey.currentState != null);
 
-    if(!_proceedCheckForAuthentication() && !ignoreAuth) return;
+    if (!_proceedCheckForAuthentication() && !ignoreAuth) return;
 
     if (event is NavigateToEvent) {
       navigatorKey.currentState?.pushNamed(event.routeName, arguments: event.argument);
