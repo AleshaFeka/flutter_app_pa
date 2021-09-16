@@ -55,7 +55,6 @@ class MyApp extends StatelessWidget {
 
   /// All nested flows should be here as well.
   Route<dynamic>? _handleNestedFlow(RouteSettings settings) {
-    print("_handleNestedFlow ${settings.name}");
     switch (settings.name) {
     /// Here we rebuild route name to correctly update the browser state. And 'do redirect' on flow's home page.
     /// We have to do it because of we did not navigate to concrete screen but to 'flow' in general.

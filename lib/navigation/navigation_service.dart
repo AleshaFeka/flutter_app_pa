@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_pa/mock_auth_service.dart';
 import 'package:flutter_app_pa/navigation/navigation_event.dart';
 import 'package:flutter_app_pa/pages/not_authenticated_page.dart';
-import 'package:flutter_app_pa/pages/outer_pages.dart';
 
 export 'package:flutter_app_pa/navigation/navigation_event.dart';
 
@@ -31,7 +30,6 @@ class NavigationService {
   }
 
   void _authListener() {
-    print("_authListener");
     _proceedCheckForAuthentication();
   }
 
